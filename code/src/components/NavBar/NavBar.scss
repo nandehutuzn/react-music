@@ -1,0 +1,17 @@
+.nav-bar-list {
+    display: flex;
+    font-size: 14px;
+    line-height: 40px;
+    background: #fff;
+    .nav-bar-item {
+        flex: 1;
+        text-align: center;
+        a {
+            display: block;
+            box-sizing: border-box;
+            &.active {
+                border-bottom: 2px solid #2D8CF0;
+            }
+        }
+    }
+}
