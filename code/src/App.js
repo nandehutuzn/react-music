@@ -33,9 +33,24 @@ class App extends Component {
             <div className="App">
                 <header className="App-header">
                     <h1 className="App-title">Listen Music</h1>
-                    <i className="iconfont icon-explain" onClick={() => this.showModal(true)} />
+                    <i className="iconfont icon-explain" onClick={() => this.showModal(true)}>?</i>
                 </header>
                 <NavBar />
+                {
+                    this.state.isShowModal && 
+                    <section className="modal-mask">
+                        <div className="modal">
+                            <div className="modal-title">项目说明</div>
+                            <div className="modal-content">
+                                <p className="modal-content-item">使用React全家桶开发的音乐WebApp，数据来源于QQ音乐API。仅供学习使用。</p>
+                                <p className="modal-content-item">
+                                    <a href="https://github.com/nandehutuzn/react-music" target="_black">Github地址</a>
+                                </p>
+                            </div>
+                            <div className="modal-footer" onClick={() => this.showModal(false)}>关闭</div>
+                        </div>
+                    </section>
+                }
             </div>
         )
     }
